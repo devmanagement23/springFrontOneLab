@@ -50,29 +50,28 @@ export default function Home() {
                 <th scope="col">First Name</th>
                 <th scope="col">Username</th>
                 <th scope="col">Email id</th>
+                <th scope="col">Operations</th>
               </tr>
             </thead>
             <tbody>
               {
-                                //map create new array
+                //map create new array
                 users.map((user, index) => (
                   <tr>
-                    <th scope="row" key={index}>{index+1}</th>
+                    <th scope="row" key={index}>{index + 1}</th>
                     <td>{user.name}</td>
                     <td>{user.username}</td>
                     <td>{user.email}</td>
+                    <td>
+                      <button className="btn btn-primary mx-2">View</button>
+                      <button className="btn btn-outline-primary mx-2">Edit</button>
+                      <button className="btn btn-danger mx-2">Delete</button>
+
+                    </td>
                   </tr>
                 ))
               }
 
-              {/*  
-              <tr>
-                <th scope="row">1</th>
-                <td>Mark</td>
-                <td>Otto</td>
-                <td>@mdo</td>
-              </tr>
-              */}
             </tbody>
           </table>
         </div>
